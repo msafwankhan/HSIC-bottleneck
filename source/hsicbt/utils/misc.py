@@ -11,6 +11,8 @@ def get_in_channels(data_code):
         in_ch = 3
     elif data_code == 'fmnist':
         in_ch = 1
+    elif data_code == 'boston':
+        in_ch = 1
     else:
         raise ValueError("Invalid or not supported dataset [{}]".format(data_code))
     return in_ch
@@ -23,6 +25,8 @@ def get_in_dimensions(data_code):
         in_dim = 1024
     elif data_code == 'fmnist':
         in_dim = 784
+    elif data_code == 'boston':
+        in_dim = 13
     else:
         raise ValueError("Invalid or not supported dataset [{}]".format(data_code))
     return in_dim
